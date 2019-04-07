@@ -48,4 +48,12 @@ public:
 
         
     }
+
+    //If hard constraint to use same array, no copy , start writing from end, biggest to smallest !! //
+    void mergeBest (vector<int>& nums1, int m, vector<int>& nums2, int n) {
+        int i = m - 1, j = n - 1, tar = m + n - 1;
+        while (j >= 0) {
+            nums1[tar--] = i >= 0 && nums1[i] > nums2[j] ? nums1[i--] : nums2[j--];
+        }
+    }
 };

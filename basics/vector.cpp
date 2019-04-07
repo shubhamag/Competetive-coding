@@ -5,7 +5,7 @@ using namespace std;
 
 
 template <class T>
-void print(std::vector<T> const &input)
+void print(vector<T> const &input)
 {
 	cout<<endl;
     for (int i = 0; i < input.size(); i++) {
